@@ -1,0 +1,785 @@
+:root{
+	--border:.1rem solid rgba(255,255,255,.3);
+	--black:black;
+	--bg:#242B33;
+	--main-color:#D0BD7D;
+	--light-gray:#302f2f;
+	--gold:#ffe680;
+	--box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+}
+.font1 {
+    font-family: 'Inter', sans-serif !important;
+  }
+  
+  .font2 {
+    font-family: 'Playfair Display', serif !important;
+  }
+  
+  .font3 {
+    font-family: 'Raleway', sans-serif !important;
+  }
+  
+  .font4 {
+    font-family: 'Roboto', sans-serif !important;
+  }
+*{
+    font-family: 'Raleway', sans-serif;
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+
+	outline: none;
+	border:none;
+	text-decoration: none;
+	transition: .2s linear;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration { display: none; }
+html{
+	font-size: 62.5%;
+	overflow-x: hidden;
+	scroll-padding-top:9rem;
+	scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+	width: 1.5rem;
+    
+}
+html::-webkit-scrollbar-track{
+	background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+	background: var(--main-color);
+	border-radius: 5rem;
+}
+.body{
+    background: #c9daee;
+}
+.empty{
+    font-size: 3rem;
+    color: #242B33;
+    font-weight: bold;
+    border: 2px solid #242B33;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+}
+.btn-login{
+    display: block;
+    margin-top: 1rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.8rem;
+    color: var(--bg);
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+}
+.btn-login{
+    background-color: var(--main-color);
+}
+.btn-login:hover{
+    background-color: orange;
+}
+.btn,.delete-btn,.option-btn{
+    display: flex;
+    margin-top: 25px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 12px;
+    font-weight: 700;
+    background-color: white;
+    color: var(--bg);  
+    padding: 1rem;        
+}
+.btn ion-icon,.delete-btn ion-icon,.option-btn ion-icon{
+    font-size: 30px;
+    --ionicon-stroke-width: 40px;
+}
+.delete-btn:hover {
+    background-color: rgb(177, 13, 13);
+    color: white;
+}
+.option-btn:hover{
+    background-color: #a6a81b;
+}
+.btn:hover{
+    background-color: var(--main-color);
+}
+section{
+    padding: 3rem 15%;
+    position: relative;
+}
+.flex-btn{
+    display: flex;
+    gap: 1rem;
+}
+
+.form-container{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+    background: #c9daee;
+}
+.form-container .row{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding: 5rem;
+}
+.form-container .row form{
+    background: rgba(0,0,0,.5);
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    box-sizing: border-box;
+    padding: 3rem;
+    text-align: center;
+    width: 50rem;
+}
+.form-container .row form h3{
+    font-size: 2.5rem;
+    color: white;
+    font-family: 'Inter', sans-serif !important;
+    padding-bottom: 3rem;
+}
+.form-container .row form .user-box {
+    position: relative;
+
+}
+.form-container .row form .user-box .box{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+.form-container .row form .user-box label{
+    position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+.form-container .row form .user-box .box:focus ~ label,
+.form-container .row form .user-box .box:valid ~ label{
+    top: -25px;
+  left: 0;
+  color: var(--gold);
+  font-size: 12px;
+}
+.bg-icon{
+    position: absolute;
+    font-size: 500px;
+    top: 15%;
+    right: 20%;
+    padding: 2rem;
+    color: #242B33;
+    opacity: 0.05;
+    z-index: 1;
+}
+.bg-icon-main{
+    position: absolute;
+    font-size: 500px;
+    bottom: 0;
+    right: 0;
+    padding: 2rem;
+    color: #242B33;
+    opacity: 0.05;
+}
+.heading{
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--bg);
+    font-size: 4rem;
+    font-weight: bold;
+    margin-top: 150px;
+}
+.header{
+    position: fixed;
+    top: 0;left: 0;right: 0;
+    background-color: var(--bg);
+    box-shadow: 0 .5rem 1rem #d0bd7d8c;
+    z-index: 100;
+    
+}
+.header .flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 1rem 9%;
+}
+.header .flex .logo-flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header .flex .logo-flex img{
+    height: 100px;width: 100px;
+}
+.header .flex .logo-flex  .logo{
+    font-size: 2.5rem;
+    color: white;
+    padding: 5px;
+}
+.header .flex .logo-flex .logo span{
+    color: var(--main-color) ;
+}
+.header .flex .navbar a{
+    margin: 0 1rem;
+    font-size: 2rem;
+    color: white;
+
+}
+.header .flex .navbar a:hover{
+    color: var(--main-color);
+}
+.header .flex .icons > *{
+    font-size: 3.5rem;
+    cursor: pointer;
+    color: white;
+    margin-left: 1.7rem;
+
+}
+.header .flex .icons > *:hover{
+    color: #D0BD7D;
+}
+.header .flex .profile{
+    position: absolute;
+    top: 120%;right: 4rem;
+    display: none;
+    animation: fadeIn .2s linear ;
+    background-color: var(--bg);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    border-top: 3px solid var(--main-color) ;
+    border-bottom: 3px solid var(--main-color) ;
+
+
+}
+@keyframes fadeIn {
+    0%{
+        transform:translateY(-1rem) ;
+    }
+
+}
+
+.header .flex .profile.active{
+    display: inline-block;
+}
+.header .flex .profile p{
+    font-size: 3rem;
+    text-align: center;
+    color: white;
+}
+.menu-btn{
+    display: none;
+}
+
+.form-container .error-message{
+    position: absolute;
+    width: 300px;
+    top: 20%;
+    left: 0;
+    display: block;
+}
+.form-container  .error-message .message-box:hover{
+    border-top: 3px solid var(--main-color) ;
+    border-bottom: 3px solid var(--main-color) ;
+    border-right: 3px solid var(--main-color) ;
+}
+.form-container .error-message .message-box{
+    display: flex;
+    border-top: 3px solid var(--bg) ;
+    border-bottom: 3px solid var(--bg) ;
+    border-right: 3px solid var(--bg) ;
+    border-radius: 0 5px 5px 0;
+    justify-content: space-evenly;
+    background-color: white;
+    margin-top: 2rem;
+    align-items: center;
+    height: 80px;
+}
+.form-container .error-message .message-box span{
+    font-size: 1.5rem;
+    color: var(--bg);
+    font-weight: bold;
+    
+}
+.form-container .error-message .message-box .del{
+    font-size: 3rem;
+    color: var(--bg);
+    cursor: pointer;
+   
+}
+.form-container .error-message .message-box  .mess{
+    font-size: 4rem;
+    color: var(--bg);
+   
+}
+.form-container .error-message .message-box .del:hover{
+    color: rgb(177, 13, 13);
+}
+.error-message{
+    position: absolute;
+    width: 300px;
+    top: 20%;
+    left: 0;
+    display: block;
+}
+.error-message .message-box:hover{
+    border-top: 3px solid var(--main-color) ;
+    border-bottom: 3px solid var(--main-color) ;
+    border-right: 3px solid var(--main-color) ;
+}
+.error-message .message-box{
+    display: flex;
+    border-top: 3px solid var(--bg) ;
+    border-bottom: 3px solid var(--bg) ;
+    border-right: 3px solid var(--bg) ;
+    border-radius: 0 5px 5px 0;
+    justify-content: space-evenly;
+    background-color: white;
+    margin-top: 2rem;
+    align-items: center;
+    height: 80px;
+}
+.error-message .message-box span{
+    font-size: 1.5rem;
+    color: var(--bg);
+    font-weight: bold;
+    max-width: 200px ;
+    
+}
+.error-message .message-box .del{
+    font-size: 3rem;
+    color: var(--bg);
+    cursor: pointer;
+    
+}
+.error-message .message-box  .mess{
+    font-size: 4rem;
+    color: var(--bg);
+    
+}
+.error-message .message-box .del:hover{
+    color: rgb(177, 13, 13);
+}
+
+
+
+
+.dashboard .box-container{
+    padding: 3rem 3%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(27rem,1fr));
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+.dashboard .box-container .box{
+    text-align: center ;
+    background-color: white;
+    border: 2px solid var(--main-color);
+    box-shadow: var(--box-shadow);
+    padding: 1.5rem;
+    
+}
+.dashboard .box-container .box h3{
+    font-size: 2.5rem;
+    color: var(--bg) ;
+}
+.dashboard .box-container .box p{
+    padding: 1.5rem;
+    border-radius: .5rem ;
+    font-size: 1.8rem;
+    background-color: #c9daee;
+    border: var(--border);
+    margin: 1rem 0;
+    color: #576370;
+}
+
+
+
+
+
+
+
+
+
+
+
+.add-products form{
+    margin: 5rem auto;
+    max-width: 80rem ;
+    text-align: center;
+    box-sizing: border-box;
+    background: rgba(0,0,0,.5);
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    padding: 2rem;
+
+}
+.add-products form .flex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.add-products form .flex .inputBox{
+    flex:1 1 40rem;
+    position: relative;
+}
+.add-products form .flex .inputBox .box{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+.add-products form .flex .inputBox label{
+    position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+.add-products form .flex .inputBox .box:focus ~ label,
+.add-products form .flex .inputBox  .box:valid ~ label{
+    top: -25px;
+    left: 0;
+    color: var(--gold);
+    font-size: 12px;
+}
+.show-products .box-container{
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,33rem);
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+.show-products .box-container .empty{
+      font-size: 3rem;
+      color: #242B33;
+      font-weight: bold;
+      border: 2px solid #242B33;
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+}
+.show-products .box-container .box{
+    text-align: center;
+    box-sizing: border-box;
+    background: white;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 20px;
+    padding: 2rem;
+    border: 2px solid black;
+}
+.show-products .box-container .box img{
+    width: 100%;
+    height: 20rem;
+    margin-bottom: 1rem;
+    object-fit: contain;
+}
+.show-products .box-container .box .name{
+    font-size: 3rem;
+    color: var(--bg);
+    font-weight: Bold;
+    text-align: left;
+}
+.show-products .box-container .box .price{
+    font-size: 2.5rem;
+    color: var(--bg);
+    margin: 1rem 0;
+    text-align: left;
+}
+.show-products .box-container .box .details{
+    font-size: 1.6rem;
+    color: #576370;
+    line-height: 2 ;
+    background-color: #c9daee;
+    padding: 0.8rem;
+    text-align: left;
+    border-radius: 10px;
+}
+.show-products .box-container .box .flex-btn{
+    justify-content: space-evenly;
+}
+.update-product form{
+    margin: 5rem auto;
+    max-width: 60rem ;
+    text-align: center;
+    box-sizing: border-box;
+    background: rgba(0,0,0,.5);
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    padding: 2rem;
+}
+.update-product form .main-container .main-image img{
+    height: 20rem;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 1.5rem;
+}
+.update-product form .main-container .user-box{
+    position: relative;
+}
+.update-product form .main-container .user-box .box{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+.update-product form .main-container .user-box label{
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+.update-product form .main-container .user-box .box:focus ~ label,
+.update-product form .main-container .user-box .box:valid ~ label{
+    top: -25px;
+    left: 0;
+    color: var(--gold);
+    font-size: 12px;
+}
+.update-product form .main-container .flex-btn{
+    justify-content: space-evenly;
+}
+.orders .box-container{
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,33rem);
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+.orders .box-container .box{
+    text-align: left;
+    box-sizing: border-box;
+    background: rgba(0,0,0,.5);
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    padding: 2rem;
+}
+.orders .box-container .box p{
+    font-size: 2rem;
+    color: var(--main-color);
+    font-weight: bold;
+    padding: .5rem 0;
+    line-height: 1;
+}
+.orders .box-container .box span{
+    color: white;
+}
+.orders .box-container .box select{
+    margin: 1rem 0;
+    background-color: #c9daee;
+    padding: 1rem 1.4rem;
+    font-size: 2rem;
+    color: var(--bg);
+    font-weight: bold;
+    border-radius: 5px;
+}
+.flex-btn{
+    justify-content: space-evenly;
+}
+.accounts .box-container{
+    margin-top: 10rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,33rem);
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+.accounts .box-container .box{
+    display: block;
+	width: 250px;
+	height: 300px;
+    background: rgba(0,0,0,.5);
+	box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+	border-radius: 15px;
+	backdrop-filter:blur(5px);
+    padding: 2rem;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+}
+
+.accounts .box-container .box .imgBx{
+    position: relative;
+	width: 80px;
+	height: 80px;
+    margin: 0;
+	border-radius: 50%;
+	overflow: hidden;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+	border: 10px solid rgba(0,0,0,0.25);
+}
+.accounts .box-container .box .imgBx ion-icon{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit:cover;
+    color: white;
+}
+.accounts .box-container .box p{
+    padding: .5rem 0;
+    line-height: 1.5;
+    font-size: 1.8rem;
+    color: var(--main-color);
+    font-weight: bold;
+}
+.accounts .box-container .box p span{
+    color: white;
+}
+
+.contacts .box-container{
+    margin-top: 10rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,33rem);
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: flex-start;
+ }
+ 
+ .contacts .box-container .box{
+    text-align: left;
+    box-sizing: border-box;
+    background: rgba(0,0,0,.5);
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    padding: 2rem;
+ }
+ 
+ .contacts .box-container .box p{
+    font-size: 2rem;
+    color: var(--main-color);
+    font-weight: bold;
+    padding: .5rem 0;
+    line-height: 1;
+}
+.contacts .box-container .box p span{
+    color: white;
+}
+ 
+
+
+@media (max-width:1300px){
+    .header .flex{
+        padding: 1rem 3%;
+    }
+    .header .flex .navbar a{
+        font-size: 1.6rem;
+    }
+    .header .flex .logo-flex img{
+        height: 80px;width: 80px;
+    }
+    .header .flex .logo-flex .logo{
+            font-size: 2rem;
+    }
+}
+
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+        
+    }
+    section{
+        padding: 3rem 5%;
+    }
+}
+@media (max-width:838px){
+    .menu-btn{
+        display: inline-block;
+    }
+    .header .flex .navbar{
+        position: absolute;
+        top: 99%;left: 0;right: 0;
+        border-top: var(--border);
+        border-bottom: var(--border) ;
+        background-color: #2d343cc4;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    .header .flex .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    .header .flex .navbar a {
+        display: block;
+        margin: 3rem;
+        font-size: 3rem;
+        text-align: center;
+    }
+
+}
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+        
+    }
+    .flex-btn{
+        flex-flow: column;
+        gap: 0;
+    }
+    .heading{
+        font-size: 3rem;
+    }
+    .add-products .logo{
+        height: 90px ;width: 250px;
+    }
+    .show-products .box-container{
+        grid-template-columns: 1fr;
+    }
+    .placed-orders .box-container{
+        grid-template-columns: 1fr;
+    }
+    .accounts .box-container{
+        grid-template-columns: 1fr;
+     }
+    .contacts .box-container{
+        grid-template-columns: 1fr;
+     }
+}
